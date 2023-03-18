@@ -1,0 +1,146 @@
+.lesson3{
+    color: blue;
+}
+#p1{
+    color: brown;
+    font-size: 20px;
+}
+.class1{
+    color: chartreuse;
+    font-size: 30px;
+}
+.class2.class3{
+    color:aqua;
+    font-size: 15px;
+}
+.childClass5 > li {
+    color: green;
+}
+:root{
+    --text-color:rgb(43, 0, 255);
+}
+h1{
+    color:var(--text-color);
+}
+/* Lựa chọn toàn bộ các thẻ */
+* {
+    /* `font-style: italic` là chữ nghiêng */
+    font-style: italic;
+}
+
+/* Lựa chọn toàn bộ các thẻ p */
+p {
+    /* `text-decoration: underline` là chữ gạch chân */
+    text-decoration: underline;
+}
+
+/* Lựa chọn toàn bộ các thẻ có class-1 */
+.class-1 {
+    color: red;
+}
+
+/* Lựa chọn toàn bộ thẻ đồng thời có cả class-2 và class-3 */
+.class-2.class-3 {
+    color: green;
+}
+
+/* Lựa chọn thẻ có class-5 là con của thẻ class-4 */
+.class-4 .class-5 {
+    color: violet;
+}
+
+/* Lựa chọn toàn bộ các thẻ p có class-6 */
+p.class-6 {
+    color: blue;
+}
+
+/* Lựa chọn toàn bộ các thẻ h3, h4 */
+h3, h4 {
+    color: brown;
+}
+
+/* Lựa chọn toàn bộ thẻ li là con của class list */
+.list li {
+    color: deepskyblue;
+}
+
+/* Lựa chọn toàn bộ thẻ li là con trực tiếp của thẻ có class list */
+.list > li {
+    color: fuchsia;
+}
+
+/* Lựa chọn 1 thẻ p đứng liền kề sau class-9 */
+.class-9 + p {
+    color: goldenrod;
+}
+
+/* Lựa chọn toàn bộ thẻ p đứng sau class-10 */
+.class-10 ~ p {
+    color: limegreen;
+}
+
+
+
+/**
+* Các bạn chưa cần học phần dưới này, đây là
+* CSS selectors nâng cao, mình sử dụng để
+* hiển thị tên class bên cạnh mỗi đoạn văn
+* trên giao diện.
+*/
+[class]::after {
+    /* Bạn có thể comment dòng dưới đây để biết tác dụng của nó */
+    content: " ("  attr(class) ")";
+}
+/* bài 7:đơn vị trong css */
+.box {
+    height: 50px;
+}
+
+.box1 {
+    width: 25%;
+    background-color: green;
+}
+
+.box2 {
+    width: 50%;
+    background-color: violet;
+}
+
+.box3 {
+    width: 75%;
+    background-color: brown;
+}
+
+.box4 {
+    width: 100%;
+    background-color: orange;
+}
+*{
+    margin: 0; /*loại bỏ margin mặc định*/
+    /* padding:0; loại bỏ padding mặc định */
+}
+/* .box-1 không có chiều cao, vì .parent-1 mặc định height: auto */
+.parent-1 .box-1 {
+    height: 30%;
+    background-color: green;
+}
+
+.parent-2 {
+    /* Hãy thử comment height lại để thấy sự thay đổi */
+    height: 400px;
+    background-color: #ccc;
+}
+
+/* .box-2 có chiều cao, vì .parent-2 được set height */
+.parent-2 .box-2 {
+    /* 30% của 400px */
+    height: 30%;
+    background-color: orange;
+}
+.text-1 {
+    font-size: 2rem;
+}
+
+.text-2 {
+    font-size: 3rem;
+}
