@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        1. h1 - h6 - heading tiêu đề 
+        2. p - paragraph - nội dung chữ
+        3. img - image - hình ảnh
+        4. a - anchor - neo liên kết
+        5. ul, li - unordered list, list - hiện thị danh sách
+        6. input - tạo ra chỗ nhập thông tin
+        8. button - tạo nút
+        9. div - tạo khối 
+        10. table - bảng
+    -->
+    <head>
+        <title>learn-code-html</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1 title="đây là tiêu đề">bài 1:các thẻ thông dụng trong HTML</h1>
+        <p title="đây là nội dung bài viết">nội dung bài 1</p>
+        <ul>
+            <ol>h1 - h6 - heading tiêu đề </ol>
+            <ol>p - paragraph - nội dung chữ</ol>
+            <ol>img - image - hình ảnh</ol>
+            <ol>a - anchor - neo liên kết</ol>
+            <ol>ul, li - unordered list, list - hiện thị danh sách</ol>
+            <ol>input - tạo ra chỗ nhập thông tin</ol>
+            <ol> table - bảng</ol>
+            <ol>button - tạo nú</ol>
+            <ol>div - tạo khối</ol>
+        </ul>
+        <h1 title="đây là tiêu đề">bài 2:attribute trong HTML</h1>
+        <p title="đây là nội dung bài viết">nội dung bài 2:attribute trong HTML là gì:
+            arttribute là thuộc tính được thêm vào các thẻ
+            ví dụ
+            <p style="color: red;">ví dụ về attribute</p>
+        </p>
+        <h1>bài 3:CSS trong HTML</h1>
+        <p>có 3 cách sử dụng:
+            <ul class="lesson3">
+                <ol>Internal:sử dụng thẻ style trong chính html</ol>
+                <ol>External:sử dụng file css ngoài để link vào html</ol>
+                <ol>Inline:attribute vào thẻ trong html</ol>
+            </ul>
+            ví dụ về Internal:làm thay đổi tiêu đề các bài  thành màu đỏ
+           <style>
+            h1 {
+                color: red;
+            }
+           </style>
+            ví dụ về External:sử dụng file css để thay đổi nội dung bài 3 thành màu xanh 
+            <link rel="stylesheet" href="main.css">
+            <p style="color:blue;">ví dụ về Inline:sử dụng attribute</p>
+        </p>
+        <h1>bài 4:CSS selector</h1>
+        <p>ID và Class:
+            <ul>
+                <li>ID dùng để định danh duy nhất 1 thuộc tính</li>
+                <li>Class dùng để gộp nhiều đối tượng để gán thuộc tính</li>
+            </ul>
+            ví dụ:
+            <p id="p1">dùng id để thay đổi dòng này</p>
+            <p class="class1">dùng class để thay đổi những dòng này</p>
+            <p class="class1">dùng class để thay đổi những dòng này</p>
+            <p class="class1">dùng class để thay đổi những dòng này</p>
+            <p class="class1">dùng class để thay đổi những dòng này</p>
+            <p class="class2 class3"> mỗi thẻ có thể có nhiều class</p>
+            <p class="children-1">Đoạn văn 1 (không parent)</p>
+<p class="children-2">Đoạn văn 2 (không parent)</p>
+
+<div class="parent">
+    <p>Đoạn văn 1 (parent 1)</p>
+    <p class="children-1">Đoạn văn 1 (con của .parent)</p>
+    <p class="children-2">Đoạn văn 2 (con của .parent)</p>
+</div>
+
+<style>
+    /* Chọn tất cả thẻ "p" là con của thẻ có class "parent" */
+    .parent p {
+        color: 
+green;
+    }
+
+    /* Chọn tất cả thẻ có class "children-1" là con của thẻ có class "parent" */
+    /* để lựa chọn thẻ con nằm trong 1 thẻ khác ta sẽ sử dụng selector có cú pháp selector-cha selector-con */
+    .parent .children-1 {
+        color: 
+red;
+    }
+</style>
+<!-- Selector	Ví dụ	Mô tả
+.class	.intro	Chọn tất cả các thẻ có class=“intro”
+.class1.class2	.name1.name2	Chọn tất cả các thẻ có cả name1 và name2 được đặt trong thuộc tính class của nó
+.class1 .class2	.name1 .name2	Chọn tất cả các thẻ có class=“name2” là con của một phần tử có class=“name1”
+*	*	Chọn tất cả các thẻ
+element	h2	Chọn tất cả các thẻ h2
+element.class	div.box	Chọn tất cả thẻ div có class=“box”
+element, element	div, h2	Chọn tất cả thẻ div và h2
+element element	div p	Chọn tất cả thẻ p trong thẻ div
+element > element	div > p	Chọn tất cả thẻ p là con trực tiếp của thẻ div
+element + element	div + p	Chọn thẻ p đứng liền kề sau thẻ div
+element ~ element	div ~ p	Chọn tất cả thẻ p đứng sau thẻ div
+hiện thị tên class trong go live
+[class]::after {
+    /* Bạn có thể comment dòng dưới đây để biết tác dụng của nó */
+    content: " ("  attr(class) ")";
+}
+           -->
+           <p class="class-1">Đoạn văn 1.1</p>
+<p class="class-1">Đoạn văn 1.2</p>
+
+<p class="class-2 class-3">Đoạn văn 2.1</p>
+<p class="class-2 class-3">Đoạn văn 2.2</p>
+
+<div class="class-4">
+    <p class="class-5">Đoạn văn 3</p>
+</div>
+
+<p class="class-6">Đoạn văn 4 - thẻ p</p>
+<div class="class-6">Nội dung 5 - thẻ div</div>
+
+<p class="class-7">Đoạn văn 6</p>
+<p class="class-8">Đoạn văn 7</p>
+
+<h3>Tiêu đề 8</h3>
+<h4>Tiêu đề 9</h4>
+
+<ul class="list">
+   <li>Item 1</li> 
+   <li>Item 2</li> 
+   <li>Item 3
+       <ul>
+           <li>Item 1 (con Item 3)</li>
+           <li>Item 2 (con Item 3)</li>
+       </ul>
+   </li> 
+</ul>
+
+<p class="class-9">Đoạn văn 10</p>
+<p>Đoạn văn 11</p>
+<p>Đoạn văn 12</p>
+
+<p class="class-10">Đoạn văn 13</p>
+<p>Đoạn văn 14</p>
+<p>Đoạn văn 15</p>
+
+<div>Vật cản</div>
+
+<p>Đoạn văn 16</p>
+<p>Đoạn văn 17</p>
+<p>Đoạn văn 18</p>
+        </p>
+        <h1 id="lesson5">bài 5:độ ưu tiên trong CSS</h1>
+        <div class="class5" id="ls5">
+        <p> 
+            <ul class="childClass5">
+                <li>1.Internal,External</li>
+                <li>2.Inline 1000đ</li>
+                <li>3.#id 100đ</li>
+                <li>4..class 10đ</li>
+                <li>5.tag 1đ gọi thẳng tên thẻ</li>
+                <li>6. equal specificity khi 2 thẻ bằng nhau thì ưu tiên cái gọi sau</li>
+                <li>7.Universal selector and inherited 0đ gọi tất cả và thừa hưởng từ cha</li>
+            </ul>
+        </p>
+    
+        <div>
+        <h1 id="lesson6">bài 6:biến trong CSS</h1>
+        <p>Biến dùng để gán giá trị cho 1 element để tái sử dụng và sửa thông tin</p>
+        <h1>bài 7: CSS units-các đơn vị trong css</h1>
+        <h2>1.Absolute units:đơn vị tuyệt đối</h2>
+        <ul>
+            <li>px</li>
+            <li>pt</li>
+            <li>cm</li>
+            <li>mm</li>
+            <li>inch</li>
+            <li>pc</li>
+        </ul>
+        ví dụ:
+        <div class="boxvidu1"></div>
+        <style>
+            .boxvidu1{
+                width: 100px;
+                height: 100px;
+                background-color: aqua;
+            }
+        </style>
+        <h2>2.relative units:giá trị tương đối</h2>
+        <ul>
+            <li>%</li>
+            <li>rem:phụ thuộc vào thẻ HTML</li>
+            <li>em:phụ thuộc vào thẻ gần nhất</li>
+            <li>vw-viewport witdth:phần trăm chiều ngang</li>
+            <li>vh-viewport height:phần trăm chiều dọc</li>
+            <li>vmin</li>
+            <li>vmax</li>
+            <li>ex</li>
+        </ul>
+        ví dụ:%
+        <div class="box50percen"></div>
+        <style>
+            .box50percen{
+                width: 50%;
+                height: 100px;
+                background-color:blue;
+            }
+        </style>
+        <div class="box box1">BOX 1</div>
+         <div class="box box2">BOX 2</div>
+         <div class="box box3">BOX 3</div>
+          <div class="box box4">BOX 4</div>
+       <ul>
+        <li>
+            Với chiều rộng thì các thẻ như body, div sẽ mặc định có width: 100%. Vì vậy, ở bài #1 các bạn mà comment thuộc tính width của .box1 lại, bạn sẽ thấy nó chiếm 100% chiều rộng.
+        </li>
+        <li>Với chiều cao, mặc định các thẻ có height: auto, chiều cao sẽ tự động thay đổi khi nội dung bên trong nó tăng lên. Nếu thẻ cha có height: auto và thẻ con của nó height: 50% thì sẽ không có tác dụng, khi ấy thẻ con vẫn có height: auto.
+        </li>
+        <P> Vì vậy, để một thẻ có thể đặt height theo % thì thẻ nó phụ thuộc phải có một chiều cao mang tính cố định.
+        </P>
+       </ul>
+       <div class="parent-1">
+        <div class="box-1">BOX 1</div>
+    </div>
+    
+    <div class="parent-2">
+        <div class="box-2">BOX 2</div>
+    </div>
+    ví dụ:rem
+    <p>
+        Khi bạn CSS cho một thẻ là font-size: 1rem, thì giá trị 1rem này sẽ phụ thuộc vào giá trị font-size được đặt cho thẻ html, mặc định tại trình duyệt thì font-size: 16px, vì vậy mặc định font-size: 1rem sẽ bằng 16px, 2rem sẽ bằng 32px.
+    </p>
+    <p class="text-1">Đoạn văn này font-size là 2rem, khi bạn thay đổi font-size cho thẻ html thì giá trị ở đây thay đổi theo.</p>
+    <p class="text-2">Đoạn văn này có font-size 3rem, vì vậy sẽ lớn gấp 2 lần đoạn văn ở trên.</p>
+    <h1>bài 8:CSS functions-hàm</h1>
+    <ul>
+        <li>var():gọi biến</li>
+        <li>linear-gradien()</li>
+        <li>rgba()</li>
+        <li>rgb():hàm lấy màu</li>
+        <li>calc():máy tính</li>
+        <li>attr()</li>
+    </ul>
+    ví dụ về lớp giả:
+    <a href="https://fullstack.edu.vn.com">học lập trình</a>
+    <div class="boxbai8" data-title="đây là box màu hồng"></div>
+    <style>
+    a::after{
+        content:"("attr(href)")";
+    }
+    .boxbai8{
+        height: 100px;
+       background-color: pink;
+    }
+    .boxbai8 ::after{
+        content: attr(data-title);
+    }
+    </style>
+    <h1>bài 9:css pseudo-classes-lớp giả</h1>
+    <ul>
+        <li>:root</li>
+        <li>:hover</li>
+        <li>:active</li>
+        <li>:first-child:lấy phần tử con đầu tiên</li>
+        <li>:last-child:lấy phần tử con cuối cùng</li>
+    </ul>
+    <p>ví dụ về hover:</p>
+     <a class="button" href="https://www.youtube.com/channel/UCNSCWwgW-rwmoE3Yc4WmJhw">Youtube F8</a>
+    <style>
+        .button {
+    /* Thêm phần đệm, cho nút dày lên */
+    /* Chương sau sẽ học chi tiết về padding */
+    padding: 8px 16px;
+
+    color: #fff;
+    background-color: #f05123;
+
+    /* Bỏ gạch chân mặc định của thẻ a */
+    text-decoration: none;
+}
+.button:hover{
+    background-color: rgba(240, 81, 35, 0.8);
+}
+    </style>
+    <p>ví dụ về active:nhấn chuột vào làm màu khối thay đổi </p>
+    <div class="box9">box bài 9</div>
+    <style>
+        .box9{
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+        }
+        .box9:active{
+            background-color: black;
+        }
+    </style>
+    <H1 class="bai10">bài 10:pseudo-elemems <br/>thuộc tính giả</H1>
+    <ul class="ulbai10">
+        <li>::before</li>
+        <li>::after</li>
+        <li>::first-letter</li>
+        <li>::first-line</li>
+        <li>:selection</li>
+    </ul>
+    ví dụ về before và after:
+    <div class="box10" style="background-color: black;height: 120px;"></div>
+    <style>
+        .box10::before{
+            content: "before";
+            display: block;
+            background-color: blue;
+            height: 60px;
+            width: 60px;
+        }
+        .box10::after{
+            content: "after";
+            display: block;
+            height: 60px;
+            width: 60px;
+            background-color: chartreuse;
+        }
+        </style>
+    ví dụ về first-letter và first-line:
+    <style>
+        .bai10::first-letter{
+            font-size: 60px;
+            color: blueviolet;
+        }
+        .bai10::first-line{
+            color: blue;
+            font-size: 4rem;
+        }
+    </style>
+    ví dụ về selection:
+    <style>
+        .bai10::selection{
+            background-color: violet;
+            color: aliceblue;
+        }
+        .ulbai10 li::selection{
+            background-color: violet;
+            color: aliceblue;
+        }
+    </style>
+    <h1>bài 11:padding, border, margin và box-sizing</h1>
+    <div class="boxbai11 box1">box 1</div>
+    <div class="boxbai11 box2">box 2</div>
+    <div class="boxbai11 box3">box 3</div>
+    <div class="boxbai11 box4">đây là box 4</div>
+    <style>
+        .boxbai11{
+            width: 60px;
+            height: 60px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        ví dụ về padding
+        .box1{
+            background-color: #243;
+            padding: 10px;
+        }
+        ví dụ về border
+        .box2{
+            background-color: orange;
+            padding: 5px;
+            border: 10px solid #333;
+            /* border-style: solid;
+            border-color: #333; */
+        }
+        ví dụ về margin
+        .box3{
+            background-color: brown;
+           margin: 20px;
+        }
+        .box4{
+            height: 100px;
+            width: 100px;
+            background-color: purple;
+            padding: 16px;
+            border: 2px  solid #333 ;
+            box-sizing: border-box;
+        }
+    </style>
+
+    </body>
+</html>
