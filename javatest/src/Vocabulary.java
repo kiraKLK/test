@@ -21,22 +21,20 @@ public class Vocabulary {
     private final ArrayList<String> DataAudio = new ArrayList<>(); 
     private Clip clip;
     private int index = 0;
-    JFrame frame = new JFrame();
     private  JPanel Panel = new JPanel();
     private  JLabel Label = new JLabel();
     private JButton nextButton = new JButton("Next");
     private JButton backButton = new JButton("Back");
+    JFrame frame = new JFrame();
     
    public Vocabulary() throws IOException{
-       this.init();
-       this.LoadData();
-       this.setDataToLabel(0);
-       
-       
+        this.init();
        frame.setSize(705,805);
        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        frame.setLocationRelativeTo(null);
        frame.setTitle("Vocabulary");
+       this.LoadData();
+       this.setDataToLabel(0);
    }
 
    // tạo hàm xử lí âm thanh
@@ -134,10 +132,10 @@ public void setDataToLabel(int index){
 
         // Thêm JButton vào JFrame
         frame.add(Button, BorderLayout.SOUTH);
-
         // Hiển thị JFrame
-        frame.pack();
-        frame.setVisible(true);
+       frame.pack();
+       frame.setVisible(true);
+        
    }
    
     public static void main(String[] args) throws IOException {
